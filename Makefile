@@ -17,3 +17,4 @@ install:
 	install -m 0644 src/zfs-auto-snapshot.8 $(DESTDIR)$(PREFIX)/share/man/man8/zfs-auto-snapshot.8
 	install -d $(DESTDIR)$(PREFIX)/sbin
 	install src/zfs-auto-snapshot.sh $(DESTDIR)$(PREFIX)/sbin/zfs-auto-snapshot
+	install src/enable-db-auto-snapshot.sh $(DESTDIR)$(PREFIX)/sbin/enable-db-auto-snapshot
