@@ -11,11 +11,28 @@ snapshots if it is installed.
 This program is a posixly correct bourne shell script.  It depends only on
 the zfs utilities and cron, and can run in the dash shell.
 
+Local changes from zfsonlinux/zfs-auto-snapshot:
+
+* Require our ZFS packages in debian/control
+* add --default-exclude flag to cron.(daily|hourly|weekly) jobs
+
 
 Installation:
 -------------
 
-wget https://github.com/zfsonlinux/zfs-auto-snapshot/archive/master.zip
-unzip master.zip
-cd zfs-auto-snapshot-master
-make install
+git clone git@github.com:kentik/zfs-auto-snapshot.git
+git checkout -b local-changes
+dpkg-buildpackage -b -uc -us
+sudo dpkg -i ../zfs-auto-snapshot_*.deb
+
+
+As configured here, only the zfs-auto-snapshot-frequent cron job will
+make snapshots (other datasets will be excluded), this runs every 15
+minutes, and 4 are maintained.
+
+To enable (e.g.) hourly/daily snaps on <dataset>, do:
+
+sudo zfs set com.sun:auto-snapshot=true <dataset>
+sudo zfs set com.sun:auto-snapshot:hourly=true <dataset>
+sudo zfs set com.sun:auto-snapshot:daily=true <dataset>
+
