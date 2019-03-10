@@ -1,0 +1,42 @@
+Format: 1.8
+Date: Tue, 14 Oct 2014 00:18:08 -0500
+Source: zfs-auto-snapshot
+Binary: zfs-auto-snapshot
+Architecture: all
+Version: 1.2.1-1
+Distribution: unstable
+Urgency: low
+Maintainer: Kentik Ops <ops-team@kentik.com>
+Changed-By: Darik Horn <dajhorn@vanadac.com>
+Description:
+ zfs-auto-snapshot - ZFS Automatic Snapshot Service
+Changes:
+ zfs-auto-snapshot (1.2.1-1) unstable; urgency=low
+ .
+   [ Roland Stühmer ]
+   * Fix SNAPNAME to contain the DATE if label is empty
+ .
+   [ Borut Mrak ]
+   * Remove PREFIX from cron scripts - they should always end up in /etc.
+   * Leave PREFIX for man page and program, and set it to /usr/local by default.
+ .
+   [ Maciej Małecki ]
+   * Add `--{pre,post}-snapshot` for pre and post creation hook
+   * Abort if pre snapshot hook returns non-zero
+   * Document `--{pre,post}-snapshot
+ .
+   [ Mike Baynton ]
+   * Make --{pre,post}-snapshot optional, add --destroy-only, revise docs
+ .
+   [ virtualguy ]
+   * Update README
+ .
+   [ Darik Horn ]
+   * Install the cron.d part without the execute bit.
+   * Update debian/rules for Makefile changes.
+Checksums-Sha1:
+ d97a49cc39ee6412ea70d659d9a2c6e4488b9a04 8956 zfs-auto-snapshot_1.2.1-1_all.deb
+Checksums-Sha256:
+ 9c0cfe20d1e7c9addc11c889a4554b9ad70d18d2d6b7e4c265c1b2c47f45a83a 8956 zfs-auto-snapshot_1.2.1-1_all.deb
+Files:
+ fe778ed9a5f7b1134d52ccef55f7f1f4 8956 admin extra zfs-auto-snapshot_1.2.1-1_all.deb
