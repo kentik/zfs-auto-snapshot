@@ -35,8 +35,8 @@ Changes:
    * Install the cron.d part without the execute bit.
    * Update debian/rules for Makefile changes.
 Checksums-Sha1:
- d97a49cc39ee6412ea70d659d9a2c6e4488b9a04 8956 zfs-auto-snapshot_1.2.1-1_all.deb
+ a0a436b54f95312e6ad9d044529a13342a141579 9192 zfs-auto-snapshot_1.2.1-1_all.deb
 Checksums-Sha256:
- 9c0cfe20d1e7c9addc11c889a4554b9ad70d18d2d6b7e4c265c1b2c47f45a83a 8956 zfs-auto-snapshot_1.2.1-1_all.deb
+ 80a63168d175a65434791a93d9808249b519c9f696a142c3b1c7f12f7a3e6251 9192 zfs-auto-snapshot_1.2.1-1_all.deb
 Files:
- fe778ed9a5f7b1134d52ccef55f7f1f4 8956 admin extra zfs-auto-snapshot_1.2.1-1_all.deb
+ b2ea97b8ad86c4af92b0bb6ac1667386 9192 admin extra zfs-auto-snapshot_1.2.1-1_all.deb
