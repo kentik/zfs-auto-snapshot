@@ -1,7 +1,7 @@
 Source: zfs-auto-snapshot
 Section: admin
 Priority: extra
-Maintainer: Darik Horn <dajhorn@vanadac.com>
+Maintainer: Kentik Ops <ops-team@kentik.com>
 Build-Depends: debhelper (>= 8)
 Standards-Version: 3.9.4
 Homepage: http://www.zfsonlinux.org/
@@ -10,7 +10,8 @@ Vcs-Browser: https://github.com/zfsonlinux/zfs-auto-snapshot/
 
 Package: zfs-auto-snapshot
 Architecture: all
-Depends: ${misc:Depends}, cron, zfsutils | zfsutils-linux
+Depends: ${misc:Depends}, cron, zfs (>= 0.7.9)
 Description: ZFS Automatic Snapshot Service
  Automatically create and destroy ZFS snapshots on an hourly, daily, weekly
  and monthly schedule.
+ Kentik-modified; cron jobs use '--default-exclude' option, depends on ZoL version.
